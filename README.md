@@ -7,3 +7,4 @@ The ideas is very simple, we need versatile media programs(including audio/video
 
 The inital idea is to build and package everything with a Raspberry Pi board. However, the recipe and idea can be implement with any other programmable platform. I wish it can grow by everyone with his/her own needs. 
 
+More updates from project, please go visit wiki on Github. 
