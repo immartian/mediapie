@@ -1,6 +1,7 @@
 # PyBTSync class
 # Sharism License
 # Isaac Mao, 2013
+# This module can only work on BT Sync for Linux,which provides a web interface for it's own web UI, but can be hacked
 
 import urllib, urllib2
 import re
