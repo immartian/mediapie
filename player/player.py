@@ -16,7 +16,7 @@ class channelPlayer():
 		self.filelist = []
 		
   	def readAll(self):
-		fullpath = os.path.abspath(channelpath)
+		fullpath = os.path.abspath('..') + "/"+ channelpath
 		dirtocheck = fullpath+ "/" +self.currentChannel
 		print dirtocheck
 			
@@ -24,7 +24,7 @@ class channelPlayer():
     			for f in files:
 				#check file type here
         			fullpath = os.path.join(root, f)
-				#print fullpath
+				print fullpath
 				self.filelist.append(fullpath)	
 		
 
