@@ -23,14 +23,24 @@ class channelPlayer():
 		for root, _, files in os.walk(dirtocheck):
     			for f in files:
 				#check file type here
-        			fullpath = os.path.join(root, f)
-				print fullpath
-				self.filelist.append(fullpath)	
+				if self.checkfiletype(f):				
+        				fullpath = os.path.join(root, f)
+					print fullpath
+					self.filelist.append(fullpath)	
 		
 
 	# play a MP3 or MIDI music file using module pygame
-	def checkfiletype(self):
-		self
+	def checkfiletype(self,fn):
+		ext = os.path.splitext(fn)[-1].lower()
+		# Now we can simply use == to check for equality, no need for wildcards.
+		if ext == ".mp3":
+			self #haha
+		elif ext == ".mp4":
+			self #ha
+		else:
+			return False
+		return True
+
 	def play_music(music_file):
 	    """
 	    stream music with mixer.music module in blocking manner
