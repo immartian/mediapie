@@ -41,7 +41,7 @@ class channelPlayer():
 			return False
 		return True
 
-	def play_music(music_file):
+	def play_music(self,music_file):
 	    """
 	    stream music with mixer.music module in blocking manner
 	    this will stream the sound from disk while playing
@@ -76,7 +76,7 @@ class channelPlayer():
 			self.readAll()
 			print self.filelist[track]
 			
-			self.paly_music(self.filelist[track])
+			self.play_music(self.filelist[track])
 
 			track = track + 1
 			if track < 0:
