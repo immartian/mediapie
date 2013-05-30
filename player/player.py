@@ -75,19 +75,8 @@ class channelPlayer():
 		while breaker == 0:
 			self.readAll()
 			print self.filelist[track]
-			pygame.mixer.music.load(self.filelist[track])
-			pygame.mixer.music.play()
-			#    pygame.mixer.music.pause()
-
-			# check if playback has finished
-			while pygame.mixer.music.get_busy():
-				clock.tick(30)
-			#      if pygame.event.get(pygame.KEYDOWN) == pygame.K_b:
-			#         pygame.mixer.music.pause()
-			#      if event.key == pygame.K_n:
-			#         pygame.mixer.music.stop()
-			#      if event.key == pygame.K_v:
-			#         track = track - 2
+			
+			self.paly_music(self.filelist[track])
 
 			track = track + 1
 			if track < 0:
