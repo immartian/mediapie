@@ -175,14 +175,14 @@ class channelPlayer():
   	def readAll(self):
 		fullpath = os.path.abspath('..') + "/"+ channelpath
 		dirtocheck = fullpath+ "/" +self.currentChannel
-		print dirtocheck
+		#print dirtocheck
 			
 		for root, _, files in os.walk(dirtocheck):
     			for f in files:
 				#check file type here
 				if self.checkfiletype(f):				
         				fullpath = os.path.join(root, f)
-					print fullpath
+					#print fullpath
 					self.filelist.append(fullpath)	
 		
 
@@ -203,7 +203,7 @@ class channelPlayer():
 
 if __name__ == "__main__":
 
-	#player= channelPlayer(channel= "RCXOVNLNVK56GBQK2OCWR3GLY2DENRZG4")
-	#player.playAll()
-	omx = OMXPlayer('../channels/RCXOVNLNVK56GBQK2OCWR3GLY2DENRZG4/09 - The Syncopated Clock.mp3')
-        
+	player= channelPlayer(channel= "RCXOVNLNVK56GBQK2OCWR3GLY2DENRZG4")
+	player.readAll()
+	omx = OMXPlayer(player.filelist[1])
+       
