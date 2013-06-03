@@ -6,6 +6,7 @@
 
 from pyomxplayer import OMXPlayer
 import os, os.path
+from random import shuffle
 
 channelpath = "channels"
 
@@ -50,7 +51,12 @@ if __name__ == "__main__":
 
 	manager= channelManager(channel= "RCXOVNLNVK56GBQK2OCWR3GLY2DENRZG4")
 	manager.readAll()
-	print manager.filelist[1]
-	omx = OMXPlayer(manager.filelist[1])
+	shuffle(manager.filelist)
+	for f in manager.filelist:
+		print f
+		omx = OMXPlayer(f)
+		while omx.is_running():
+			pass
+			
 
        
