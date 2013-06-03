@@ -4,6 +4,8 @@
 # Sharism Licence, 2013
 # by @isaac Mao
 
+#import pexpect
+import re
 
 from threading import Thread
 from time import sleep
