@@ -45,6 +45,8 @@ class OMXPlayer(object):
 		(self.audio['channels'], self.audio['rate'],
 		 self.audio['bps']) = [int(x) for x in audio_props[1:]]
 
+	except:
+		pass
         if self.audio['streams'] > 0:
             self.current_audio_stream = 1
             self.current_volume = 0.0
